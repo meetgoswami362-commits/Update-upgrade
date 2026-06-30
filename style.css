@@ -317,7 +317,8 @@ header{
 }
 
 .hero-image img{
-    width:420px;
+   
+    width:440px;
     max-width:100%;
     border-radius:30px;
     border:2px solid rgba(255,255,255,.08);
@@ -483,71 +484,7 @@ header{
     color:#cfcfcf;
 }
 
-/* =========================
-   PROJECTS
-========================= */
 
-#projects{
-    padding:120px 0;
-}
-
-
-
-
-.projects-grid{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-}
-
-.project-card{
-    overflow:hidden;
-    border-radius:25px;
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    transition:.5s;
-}
-
-.project-card:hover{
-    transform:
-    translateY(-12px)
-    rotateX(5deg);
-}
-
-.project-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.project-card h3{
-    padding:20px 20px 10px;
-}
-
-.project-card p{
-    padding:0 20px;
-    color:#cfcfcf;
-}
-
-.project-links{
-    padding:20px;
-    display:flex;
-    gap:15px;
-}
-
-.project-links a{
-    text-decoration:none;
-    color:white;
-    padding:10px 18px;
-    border-radius:12px;
-    background:rgba(255,255,255,.08);
-}
-
-.project-links a:hover{
-    background:var(--primary);
-    color:black;
-}
 
 /* =========================
    SERVICES
@@ -593,37 +530,70 @@ header{
     font-size:1.2rem;
 }
 
-/* =========================
-   TESTIMONIALS
-========================= */
+/* Support Section */
 
-#testimonials{
-    padding:120px 0;
+#support{
+    padding:90px 8%;
 }
 
-.testimonial-slider{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-}
-
-.testimonial-card{
-    padding:35px;
-    border-radius:25px;
+.support-card{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    padding:45px;
+    border-radius:20px;
     background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1);
+    box-shadow:0 10px 35px rgba(0,0,0,.3);
 }
 
-.testimonial-card p{
-    color:#cfcfcf;
+.support-card h3{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.support-card p{
+    font-size:17px;
     line-height:1.8;
+    color:#cfcfcf;
+    margin-bottom:35px;
 }
 
-.testimonial-card h4{
-    margin-top:20px;
-    color:var(--primary);
+.support-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
 }
+
+.support-btn{
+    padding:15px 28px;
+    border-radius:50px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    transition:.3s;
+}
+
+.call{
+    background:#16a34a;
+}
+
+.email{
+    background:#2563eb;
+}
+
+.instagram{
+    background:#e1306c;
+}
+
+.support-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+
 
 /* =========================
    CONTACT
@@ -801,4 +771,71 @@ footer p{
 .light-mode{
     background:#f8fafc;
     color:#111827;
+}
+
+
+
+
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.footer-brand{
+    max-width:350px;
+}
+
+.footer-brand h2{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.footer-brand span{
+    color:var(--primary);
+}
+
+.footer-brand p{
+    color:#bdbdbd;
+    line-height:1.8;
+}
+
+
+
+
+
+footer hr{
+    margin:40px 0 20px;
+    border:none;
+    height:1px;
+    background:rgba(255,255,255,.08);
+}
+
+.footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.footer-bottom p{
+    color:#9ca3af;
+    font-size:.95rem;
+}
+
+.footer-bottom strong{
+    color:var(--primary);
+}
+
+@media(max-width:768px){
+
+    .footer-content,
+    .footer-bottom{
+        text-align:center;
+        justify-content:center;
+    }
 }
