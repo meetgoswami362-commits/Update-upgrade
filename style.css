@@ -779,7 +779,7 @@ footer p{
 
 .footer-content{
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items:flex-start;
     gap:40px;
     flex-wrap:wrap;
@@ -816,7 +816,7 @@ footer hr{
 
 .footer-bottom{
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
     flex-wrap:wrap;
     gap:10px;
