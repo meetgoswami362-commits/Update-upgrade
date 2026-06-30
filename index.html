@@ -351,6 +351,31 @@ emailjs.init({
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
 
+<script>
+    // Wait until the page is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
 
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_m5ouq1z",      // Replace with your Service ID
+            "template_njtloj7",     // Replace with your Template ID
+            this
+        )
+        .then(function () {
+            alert("✅ Message sent successfully!");
+            form.reset();
+        })
+        .catch(function (error) {
+            console.error("EmailJS Error:", error);
+            alert("❌ Failed to send message.\n\n" + JSON.stringify(error));
+        });
+    });
+
+});
+</script>
 </body>
 </html>
